@@ -1,0 +1,231 @@
+ 
+
+FONTES DAS IMAGENS – PROJETO CLIMACONSCIENTE  
+
+============================================================  
+
+   
+
+Projeto:  
+
+ClimaConsciente – ODS 13: Ação Contra a Mudança Global do Clima  
+
+   
+
+Disciplina:  
+
+Desenvolvimento Web  
+
+   
+
+Finalidade:  
+
+Projeto acadêmico desenvolvido para a primeira atividade avaliativa  
+
+da disciplina de Desenvolvimento Web, relacionado ao Objetivo de  
+
+Desenvolvimento Sustentável (ODS) 13 da Organização das Nações Unidas.  
+
+   
+
+   
+
+1. BANNER PRINCIPAL  
+
+------------------------------------------------------------  
+
+   
+
+Arquivo:  
+
+banner.jpg  
+
+   
+
+Descrição:  
+
+Imagem de uma paisagem natural com montanhas, vegetação, água e  
+
+aerogeradores de energia eólica, utilizada como imagem principal  
+
+da página inicial.  
+
+   
+
+Origem:  
+
+Imagem gerada especificamente para o projeto ClimaConsciente por  
+
+meio de ferramenta de geração de imagens por inteligência artificial.  
+
+   
+
+Não foi utilizada uma imagem copiada de site de terceiros.  
+
+   
+
+   
+
+2. NOTÍCIA – CLIMA  
+
+------------------------------------------------------------  
+
+   
+
+Arquivo:  
+
+noticia-clima.jpg  
+
+   
+
+Descrição:  
+
+Imagem representando os impactos das mudanças climáticas, com  
+
+solo seco e uma planta crescendo em uma área afetada pela  
+
+estiagem.  
+
+   
+
+Origem:  
+
+Imagem gerada especificamente para o projeto ClimaConsciente por  
+
+meio de ferramenta de geração de imagens por inteligência artificial.  
+
+   
+
+Não foi utilizada uma imagem copiada de site de terceiros.  
+
+   
+
+   
+
+3. NOTÍCIA – ENERGIA  
+
+------------------------------------------------------------  
+
+   
+
+Arquivo:  
+
+noticia-energia.jpg  
+
+   
+
+Descrição:  
+
+Imagem representando fontes de energia renovável, com painéis  
+
+solares e aerogeradores.  
+
+   
+
+Origem:  
+
+Imagem gerada especificamente para o projeto ClimaConsciente por  
+
+meio de ferramenta de geração de imagens por inteligência artificial.  
+
+   
+
+Não foi utilizada uma imagem copiada de site de terceiros.  
+
+   
+
+   
+
+4. NOTÍCIA – FLORESTA  
+
+------------------------------------------------------------  
+
+   
+
+Arquivo:  
+
+noticia-floresta.jpg  
+
+   
+
+Descrição:  
+
+Imagem de uma floresta preservada, representando a importância  
+
+das áreas verdes para o equilíbrio ambiental e climático.  
+
+   
+
+Origem:  
+
+Imagem gerada especificamente para o projeto ClimaConsciente por  
+
+meio de ferramenta de geração de imagens por inteligência artificial.  
+
+   
+
+Não foi utilizada uma imagem copiada de site de terceiros.  
+
+   
+
+   
+
+5. DIREITOS E UTILIZAÇÃO  
+
+------------------------------------------------------------  
+
+   
+
+As imagens utilizadas nesta primeira versão da aplicação foram  
+
+produzidas especificamente para o projeto acadêmico e não foram  
+
+copiadas de bancos de imagens, sites de notícias, redes sociais  
+
+ou outras páginas da internet.  
+
+   
+
+As imagens foram utilizadas exclusivamente para fins acadêmicos  
+
+na construção da aplicação web ClimaConsciente.  
+
+   
+
+   
+
+6. OBSERVAÇÃO  
+
+------------------------------------------------------------  
+
+   
+
+Caso sejam adicionadas novas imagens ao projeto nas próximas etapas,  
+
+a equipe deverá registrar neste arquivo a origem, o endereço da  
+
+fonte, o autor ou banco de imagens utilizado e as condições de  
+
+licenciamento, quando aplicável.  
+
+   
+
+Este registro foi criado para facilitar a identificação das fontes  
+
+dos recursos visuais utilizados na aplicação e também poderá ser  
+
+consultado durante a elaboração do relatório técnico da atividade.  
+
+   
+
+   
+
+============================================================  
+
+ClimaConsciente  
+
+ODS 13 – Ação Contra a Mudança Global do Clima  
+
+Projeto acadêmico – Desenvolvimento Web  
+
+============================================================

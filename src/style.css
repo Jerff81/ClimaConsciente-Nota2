@@ -1,0 +1,636 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Roboto:wght@300;400;500;600;700&display=swap");
+
+:root {
+    --cor-verde: #2e7d32;
+    --cor-verde-escuro: #1b5e20;
+    --cor-verde-claro: #4caf50;
+    --cor-verde-suave: #e8f5e9;
+
+    --cor-azul: #1565c0;
+    --cor-azul-claro: #e3f2fd;
+
+    --cor-amarelo: #f9a825;
+
+    --cor-texto: #212529;
+    --cor-texto-suave: #5f6368;
+
+    --cor-fundo: #f8f9fa;
+    --cor-branco: #ffffff;
+    --cor-borda: #e5e7eb;
+
+    --cor-sucesso: #198754;
+
+    --sombra: 0 8px 25px rgba(0, 0, 0, 0.08);
+    --sombra-hover: 0 14px 35px rgba(0, 0, 0, 0.12);
+
+    --transicao: 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    color: var(--cor-texto);
+    background-color: var(--cor-branco);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* =========================================================
+   ACESSIBILIDADE
+   ========================================================= */
+
+.skip-link {
+    position: absolute;
+    top: -100px;
+    left: 15px;
+    z-index: 9999;
+
+    background-color: var(--cor-verde);
+    color: var(--cor-branco);
+
+    padding: 10px 16px;
+
+    border-radius: 0 0 8px 8px;
+
+    transition: top var(--transicao);
+}
+
+.skip-link:focus {
+    top: 0;
+}
+
+
+/* =========================================================
+   NAVBAR
+   ========================================================= */
+
+.navbar-clima {
+    position: relative;
+    z-index: 1000;
+
+    background-color: var(--cor-branco);
+
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.06);
+
+    padding: 12px 0;
+}
+
+.logo-marca {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    color: var(--cor-verde);
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 1.35rem;
+
+    font-weight: 700;
+}
+
+.logo-marca:hover {
+    color: var(--cor-verde);
+}
+
+.logo-icone {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background-color: var(--cor-verde);
+
+    color: var(--cor-branco);
+
+    font-size: 1.3rem;
+
+    flex-shrink: 0;
+}
+
+.navbar-clima .nav-link {
+    color: var(--cor-texto);
+
+    font-weight: 500;
+
+    padding: 8px 12px !important;
+
+    transition: color var(--transicao);
+}
+
+.navbar-clima .nav-link:hover,
+.navbar-clima .nav-link.active {
+    color: var(--cor-verde);
+}
+
+.btn-nav {
+    background-color: var(--cor-verde);
+
+    color: var(--cor-branco) !important;
+
+    border-radius: 50px;
+
+    padding: 9px 18px !important;
+}
+
+.btn-nav:hover,
+.btn-nav.active {
+    background-color: var(--cor-verde-escuro);
+
+    color: var(--cor-branco) !important;
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.hero {
+    min-height: 620px;
+
+    display: flex;
+    align-items: center;
+
+    position: relative;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(27, 94, 32, 0.95),
+            rgba(46, 125, 50, 0.78),
+            rgba(46, 125, 50, 0.35)
+        ),
+        url("/assets/img/banner.jpg") center/cover no-repeat;
+
+    color: var(--cor-branco);
+}
+
+.hero-conteudo {
+    max-width: 760px;
+
+    padding: 80px 0;
+}
+
+.hero-etiqueta {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    margin-bottom: 20px;
+
+    padding: 8px 14px;
+
+    border: 1px solid rgba(255, 255, 255, 0.35);
+
+    border-radius: 50px;
+
+    background-color: rgba(255, 255, 255, 0.1);
+
+    font-size: 0.9rem;
+
+    font-weight: 500;
+}
+
+.hero h1 {
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+
+    line-height: 1.1;
+
+    margin-bottom: 25px;
+}
+
+.hero h1 span {
+    display: block;
+
+    color: #c8e6c9;
+}
+
+.hero p {
+    max-width: 650px;
+
+    font-size: 1.15rem;
+
+    margin-bottom: 30px;
+}
+
+.hero-acoes {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 12px;
+}
+
+
+/* =========================================================
+   BOTÕES
+   ========================================================= */
+
+.btn-clima {
+    background-color: var(--cor-verde);
+
+    border: 2px solid var(--cor-verde);
+
+    color: var(--cor-branco);
+
+    border-radius: 50px;
+
+    padding: 11px 22px;
+
+    font-weight: 600;
+
+    transition: all var(--transicao);
+}
+
+.btn-clima:hover {
+    background-color: var(--cor-verde-escuro);
+
+    border-color: var(--cor-verde-escuro);
+
+    color: var(--cor-branco);
+
+    transform: translateY(-2px);
+}
+
+.hero .btn-clima {
+    background-color: var(--cor-branco);
+
+    border-color: var(--cor-branco);
+
+    color: var(--cor-verde);
+}
+
+.hero .btn-clima:hover {
+    background-color: #f1f1f1;
+
+    border-color: #f1f1f1;
+}
+
+.btn-outline-clima {
+    border: 2px solid rgba(255, 255, 255, 0.8);
+
+    color: var(--cor-branco);
+
+    border-radius: 50px;
+
+    padding: 11px 22px;
+
+    font-weight: 600;
+}
+
+.btn-outline-clima:hover {
+    background-color: var(--cor-branco);
+
+    color: var(--cor-verde);
+}
+
+
+/* =========================================================
+   SEÇÕES
+   ========================================================= */
+
+.secao {
+    padding: 80px 0;
+}
+
+.secao-clara {
+    background-color: var(--cor-fundo);
+}
+
+.secao-verde {
+    background-color: var(--cor-verde-suave);
+}
+
+.titulo-secao {
+    max-width: 760px;
+
+    margin: 0 auto 45px;
+}
+
+.titulo-secao .etiqueta,
+.etiqueta {
+    display: inline-block;
+
+    color: var(--cor-verde);
+
+    font-size: 0.85rem;
+
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1.5px;
+
+    margin-bottom: 10px;
+}
+
+.titulo-secao h2,
+.secao-verde h2 {
+    margin-bottom: 15px;
+}
+
+.titulo-secao p {
+    color: var(--cor-texto-suave);
+
+    margin-bottom: 0;
+}
+
+
+/* =========================================================
+   CARDS
+   ========================================================= */
+
+.card-clima {
+    background-color: var(--cor-branco);
+
+    border: 1px solid var(--cor-borda);
+
+    border-radius: 16px;
+
+    padding: 30px;
+
+    box-shadow: var(--sombra);
+
+    transition: all var(--transicao);
+}
+
+.card-clima:hover {
+    transform: translateY(-6px);
+
+    box-shadow: var(--sombra-hover);
+}
+
+.icone-card {
+    width: 58px;
+    height: 58px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 20px;
+
+    border-radius: 14px;
+
+    background-color: var(--cor-verde-suave);
+
+    color: var(--cor-verde);
+
+    font-size: 1.6rem;
+}
+
+.card-clima h3 {
+    font-size: 1.3rem;
+
+    margin-bottom: 12px;
+}
+
+.card-clima p {
+    color: var(--cor-texto-suave);
+
+    margin-bottom: 20px;
+}
+
+.card-clima a {
+    color: var(--cor-verde);
+
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   DESTAQUE ODS
+   ========================================================= */
+
+.destaque-ods {
+    min-height: 280px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    padding: 40px;
+
+    border-radius: 25px;
+
+    background-color: var(--cor-verde);
+
+    color: var(--cor-branco);
+
+    text-align: center;
+
+    box-shadow: var(--sombra);
+}
+
+.destaque-ods i {
+    font-size: 4rem;
+
+    margin-bottom: 10px;
+}
+
+.destaque-ods strong {
+    font-family: "Poppins", sans-serif;
+
+    font-size: 2rem;
+}
+
+.destaque-ods span {
+    max-width: 260px;
+}
+
+
+/* =========================================================
+   CTA
+   ========================================================= */
+
+.cta-clima {
+    padding: 60px 30px;
+
+    border-radius: 25px;
+
+    background-color: var(--cor-verde-suave);
+
+    border: 1px solid #c8e6c9;
+}
+
+.cta-clima > i {
+    display: block;
+
+    color: var(--cor-verde);
+
+    font-size: 3rem;
+
+    margin-bottom: 15px;
+}
+
+.cta-clima h2 {
+    margin-bottom: 15px;
+}
+
+.cta-clima p {
+    max-width: 650px;
+
+    margin: 0 auto 25px;
+
+    color: var(--cor-texto-suave);
+}
+
+
+/* =========================================================
+   RODAPÉ
+   ========================================================= */
+
+.rodape {
+    padding: 60px 0 25px;
+
+    background-color: #163d19;
+
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.rodape .logo-marca {
+    color: var(--cor-branco);
+}
+
+.rodape .logo-marca:hover {
+    color: var(--cor-branco);
+}
+
+.rodape .logo-icone {
+    background-color: var(--cor-branco);
+
+    color: var(--cor-verde);
+}
+
+.rodape h5 {
+    color: var(--cor-branco);
+
+    margin-bottom: 18px;
+}
+
+.lista-rodape {
+    list-style: none;
+
+    padding: 0;
+
+    margin: 0;
+}
+
+.lista-rodape li {
+    margin-bottom: 8px;
+}
+
+.lista-rodape a {
+    color: rgba(255, 255, 255, 0.75);
+
+    transition: color var(--transicao);
+}
+
+.lista-rodape a:hover {
+    color: var(--cor-branco);
+}
+
+.rodape hr {
+    margin: 35px 0 20px;
+
+    border-color: rgba(255, 255, 255, 0.15);
+}
+
+
+/* =========================================================
+   RESPONSIVIDADE
+   ========================================================= */
+
+@media (max-width: 991.98px) {
+
+    .navbar-clima .navbar-nav {
+        padding-top: 15px;
+    }
+
+    .navbar-clima .nav-link {
+        padding: 10px 0 !important;
+    }
+
+    .btn-nav {
+        display: inline-block;
+
+        margin-top: 5px;
+    }
+
+    .hero {
+        min-height: 560px;
+    }
+
+}
+
+@media (max-width: 575.98px) {
+
+    .secao {
+        padding: 60px 0;
+    }
+
+    .hero-conteudo {
+        padding: 60px 0;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-etiqueta {
+        font-size: 0.78rem;
+    }
+
+    .hero-acoes {
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+    .hero-acoes .btn {
+        text-align: center;
+    }
+
+}
