@@ -4,62 +4,134 @@ function Home() {
     return (
         <>
             {/* =====================================================
-                HERO
+                HERO PRINCIPAL
             ====================================================== */}
             <section
-                className="hero"
+                className="home-hero"
                 aria-labelledby="titulo-principal"
             >
+                <div className="home-hero-overlay"></div>
+
+                <div className="home-hero-circulo home-circulo-1"></div>
+                <div className="home-hero-circulo home-circulo-2"></div>
+
                 <div className="container">
-                    <div className="hero-conteudo">
+                    <div className="row align-items-center">
+                        <div className="col-lg-8">
+                            <div className="home-hero-conteudo">
 
-                        <span className="hero-etiqueta">
-                            <i className="bi bi-globe2"></i>
-                            ODS 13 — Ação Contra a Mudança Global do Clima
-                        </span>
+                                <span className="home-hero-badge">
+                                    <i className="bi bi-globe-americas me-2"></i>
+                                    ODS 13 — Ação Contra a Mudança Global do Clima
+                                </span>
 
-                        <h1 id="titulo-principal">
-                            Pequenas atitudes.
-                            <span>Grandes mudanças.</span>
-                        </h1>
+                                <span className="home-hero-mini">
+                                    CLIMACONSCIENTE • EDUCAÇÃO • AÇÃO • FUTURO
+                                </span>
 
-                        <p>
-                            Informação e conscientização para ajudar
-                            você a compreender as mudanças climáticas
-                            e transformar pequenas atitudes do dia a dia
-                            em ações positivas para o planeta.
-                        </p>
+                                <h1 id="titulo-principal">
+                                    Pequenas atitudes.
+                                    <span> Grandes mudanças.</span>
+                                </h1>
 
-                        <div className="d-flex flex-wrap gap-2">
+                                <p>
+                                    Informação e conscientização para ajudar
+                                    você a compreender as mudanças climáticas
+                                    e transformar pequenas atitudes do dia a dia
+                                    em ações positivas para o planeta.
+                                </p>
 
-                            <Link
-                                to="/ods13"
-                                className="btn-principal"
-                            >
-                                Conheça o ODS 13
-                                <i className="bi bi-arrow-right ms-2"></i>
-                            </Link>
+                                <div className="home-hero-botoes">
 
-                            <Link
-                                to="/simulador"
-                                className="btn-outline-clima"
-                            >
-                                Simule seu impacto
-                                <i className="bi bi-bar-chart ms-2"></i>
-                            </Link>
+                                    <Link
+                                        to="/ods13"
+                                        className="home-btn-principal"
+                                    >
+                                        Conheça o ODS 13
+                                        <i className="bi bi-arrow-right"></i>
+                                    </Link>
 
+                                    <Link
+                                        to="/simulador"
+                                        className="home-btn-outline"
+                                    >
+                                        Simule seu impacto
+                                        <i className="bi bi-bar-chart-fill"></i>
+                                    </Link>
+
+                                </div>
+
+                                <div className="home-hero-destaques">
+
+                                    <div>
+                                        <i className="bi bi-lightbulb-fill"></i>
+                                        <span>
+                                            Conscientização
+                                        </span>
+                                    </div>
+
+                                    <div>
+                                        <i className="bi bi-arrow-repeat"></i>
+                                        <span>
+                                            Sustentabilidade
+                                        </span>
+                                    </div>
+
+                                    <div>
+                                        <i className="bi bi-people-fill"></i>
+                                        <span>
+                                            Participação
+                                        </span>
+                                    </div>
+
+                                </div>
+
+                            </div>
                         </div>
 
+                        <div className="col-lg-4 d-none d-lg-block">
+                            <div className="home-hero-visual">
+
+                                <div className="home-ods-orbita"></div>
+
+                                <div className="home-ods-centro">
+                                    <i className="bi bi-globe-americas"></i>
+                                    <strong>13</strong>
+                                    <span>ODS</span>
+                                </div>
+
+                                <div className="home-ods-flutuante home-ods-1">
+                                    <i className="bi bi-tree-fill"></i>
+                                    <span>NATUREZA</span>
+                                </div>
+
+                                <div className="home-ods-flutuante home-ods-2">
+                                    <i className="bi bi-lightning-charge-fill"></i>
+                                    <span>ENERGIA</span>
+                                </div>
+
+                                <div className="home-ods-flutuante home-ods-3">
+                                    <i className="bi bi-recycle"></i>
+                                    <span>RESÍDUOS</span>
+                                </div>
+
+                            </div>
+                        </div>
                     </div>
+                </div>
+
+                <div className="home-hero-indicador">
+                    <span>Explore o projeto</span>
+                    <i className="bi bi-chevron-down"></i>
                 </div>
             </section>
 
 
             {/* =====================================================
-                ODS 13
+                INTRODUÇÃO ODS 13
             ====================================================== */}
             <section
-                className="secao"
+                className="home-ods-secao"
                 id="ods"
                 aria-labelledby="titulo-ods"
             >
@@ -69,26 +141,25 @@ function Home() {
 
                         <div className="col-lg-6">
 
-                            <div className="titulo-secao mb-4">
-
-                                <span className="etiqueta">
-                                    Conheça
-                                </span>
-
-                                <h2 id="titulo-ods">
-                                    O que é o ODS 13?
-                                </h2>
-
+                            <div className="home-secao-etiqueta">
+                                <span>CONHEÇA</span>
                             </div>
 
-                            <p>
+                            <h2
+                                id="titulo-ods"
+                                className="home-titulo"
+                            >
+                                O que é o <span>ODS 13?</span>
+                            </h2>
+
+                            <p className="home-texto">
                                 O Objetivo de Desenvolvimento Sustentável
                                 13 busca promover ações urgentes para
                                 combater as mudanças climáticas e seus
                                 impactos.
                             </p>
 
-                            <p>
+                            <p className="home-texto">
                                 O ODS 13 faz parte da Agenda 2030 da
                                 Organização das Nações Unidas e incentiva
                                 governos, empresas e cidadãos a adotarem
@@ -96,11 +167,10 @@ function Home() {
                                 relacionados ao clima.
                             </p>
 
-                            <ul className="ods-lista">
+                            <ul className="home-ods-lista">
 
                                 <li>
                                     <i className="bi bi-check-circle-fill"></i>
-
                                     <span>
                                         Aumentar a conscientização sobre
                                         as mudanças climáticas.
@@ -109,7 +179,6 @@ function Home() {
 
                                 <li>
                                     <i className="bi bi-check-circle-fill"></i>
-
                                     <span>
                                         Incentivar ações sustentáveis.
                                     </span>
@@ -117,7 +186,6 @@ function Home() {
 
                                 <li>
                                     <i className="bi bi-check-circle-fill"></i>
-
                                     <span>
                                         Reduzir impactos ambientais.
                                     </span>
@@ -125,7 +193,6 @@ function Home() {
 
                                 <li>
                                     <i className="bi bi-check-circle-fill"></i>
-
                                     <span>
                                         Estimular a participação da sociedade.
                                     </span>
@@ -135,10 +202,10 @@ function Home() {
 
                             <Link
                                 to="/ods13"
-                                className="btn btn-success rounded-pill px-4"
+                                className="home-link-botao"
                             >
                                 Saiba mais sobre o ODS 13
-                                <i className="bi bi-arrow-right ms-1"></i>
+                                <i className="bi bi-arrow-right"></i>
                             </Link>
 
                         </div>
@@ -146,10 +213,17 @@ function Home() {
 
                         <div className="col-lg-6">
 
-                            <article className="ods-card">
+                            <article className="home-ods-card">
 
-                                <div className="ods-numero">
-                                    13
+                                <div className="home-ods-card-topo">
+                                    <div className="home-ods-numero">
+                                        13
+                                    </div>
+
+                                    <span>
+                                        OBJETIVO DE DESENVOLVIMENTO
+                                        SUSTENTÁVEL
+                                    </span>
                                 </div>
 
                                 <h3>
@@ -161,58 +235,56 @@ function Home() {
                                     a mudança do clima e seus impactos.
                                 </p>
 
-                                <hr />
+                                <div className="home-ods-linhas">
 
-                                <div className="row g-3">
-
-                                    <div className="col-sm-6">
-
-                                        <strong className="d-block fs-5">
-                                            Conscientização
-                                        </strong>
-
-                                        <small className="text-muted">
-                                            Informação para transformar
-                                            comportamentos.
-                                        </small>
-
+                                    <div className="home-ods-item">
+                                        <i className="bi bi-lightbulb-fill"></i>
+                                        <div>
+                                            <strong>
+                                                Conscientização
+                                            </strong>
+                                            <small>
+                                                Informação para transformar
+                                                comportamentos.
+                                            </small>
+                                        </div>
                                     </div>
 
-                                    <div className="col-sm-6">
-
-                                        <strong className="d-block fs-5">
-                                            Ação
-                                        </strong>
-
-                                        <small className="text-muted">
-                                            Atitudes sustentáveis no
-                                            cotidiano.
-                                        </small>
-
+                                    <div className="home-ods-item">
+                                        <i className="bi bi-person-check-fill"></i>
+                                        <div>
+                                            <strong>
+                                                Ação
+                                            </strong>
+                                            <small>
+                                                Atitudes sustentáveis no
+                                                cotidiano.
+                                            </small>
+                                        </div>
                                     </div>
 
-                                    <div className="col-sm-6">
-
-                                        <strong className="d-block fs-5">
-                                            Cooperação
-                                        </strong>
-
-                                        <small className="text-muted">
-                                            Participação da sociedade.
-                                        </small>
-
+                                    <div className="home-ods-item">
+                                        <i className="bi bi-people-fill"></i>
+                                        <div>
+                                            <strong>
+                                                Cooperação
+                                            </strong>
+                                            <small>
+                                                Participação da sociedade.
+                                            </small>
+                                        </div>
                                     </div>
 
-                                    <div className="col-sm-6">
-
-                                        <strong className="d-block fs-5">
-                                            Futuro
-                                        </strong>
-
-                                        <small className="text-muted">
-                                            Um planeta mais sustentável.
-                                        </small>
-
+                                    <div className="home-ods-item">
+                                        <i className="bi bi-tree-fill"></i>
+                                        <div>
+                                            <strong>
+                                                Futuro
+                                            </strong>
+                                            <small>
+                                                Um planeta mais sustentável.
+                                            </small>
+                                        </div>
                                     </div>
 
                                 </div>
@@ -231,20 +303,25 @@ function Home() {
                 NOTÍCIAS
             ====================================================== */}
             <section
-                className="secao secao-clara"
+                className="home-noticias-secao"
                 aria-labelledby="titulo-noticias"
             >
                 <div className="container">
 
-                    <div className="titulo-secao">
+                    <div className="home-cabecalho-secao">
 
-                        <span className="etiqueta">
-                            Informação
-                        </span>
+                        <div>
+                            <span className="home-secao-etiqueta">
+                                INFORMAÇÃO
+                            </span>
 
-                        <h2 id="titulo-noticias">
-                            Notícias e atualidades
-                        </h2>
+                            <h2
+                                id="titulo-noticias"
+                                className="home-titulo"
+                            >
+                                Notícias e atualidades
+                            </h2>
+                        </div>
 
                         <p>
                             Acompanhe conteúdos relacionados ao clima,
@@ -256,25 +333,24 @@ function Home() {
 
                     <div className="row g-4">
 
-                        {/* NOTÍCIA 1 */}
                         <div className="col-md-6 col-lg-4">
 
-                            <article className="card-clima">
+                            <article className="home-noticia-card">
 
-                                <div className="card-clima-imagem">
+                                <div className="home-noticia-imagem">
 
                                     <img
                                         src="/assets/img/noticia-clima.jpg"
                                         alt="Paisagem natural representando a importância da preservação ambiental"
                                     />
 
-                                </div>
-
-                                <div className="card-clima-conteudo">
-
-                                    <span className="card-categoria">
+                                    <span>
                                         Clima
                                     </span>
+
+                                </div>
+
+                                <div className="home-noticia-conteudo">
 
                                     <h3>
                                         Mudanças climáticas
@@ -287,7 +363,7 @@ function Home() {
 
                                     <Link to="/noticias">
                                         Ler mais
-                                        <i className="bi bi-arrow-right ms-2"></i>
+                                        <i className="bi bi-arrow-right"></i>
                                     </Link>
 
                                 </div>
@@ -297,25 +373,24 @@ function Home() {
                         </div>
 
 
-                        {/* NOTÍCIA 2 */}
                         <div className="col-md-6 col-lg-4">
 
-                            <article className="card-clima">
+                            <article className="home-noticia-card">
 
-                                <div className="card-clima-imagem">
+                                <div className="home-noticia-imagem">
 
                                     <img
                                         src="/assets/img/noticia-energia.jpg"
                                         alt="Imagem relacionada ao consumo consciente de energia"
                                     />
 
-                                </div>
-
-                                <div className="card-clima-conteudo">
-
-                                    <span className="card-categoria">
+                                    <span>
                                         Energia
                                     </span>
+
+                                </div>
+
+                                <div className="home-noticia-conteudo">
 
                                     <h3>
                                         Uso consciente de energia
@@ -328,7 +403,7 @@ function Home() {
 
                                     <Link to="/noticias">
                                         Ler mais
-                                        <i className="bi bi-arrow-right ms-2"></i>
+                                        <i className="bi bi-arrow-right"></i>
                                     </Link>
 
                                 </div>
@@ -338,25 +413,24 @@ function Home() {
                         </div>
 
 
-                        {/* NOTÍCIA 3 */}
                         <div className="col-md-6 col-lg-4">
 
-                            <article className="card-clima">
+                            <article className="home-noticia-card">
 
-                                <div className="card-clima-imagem">
+                                <div className="home-noticia-imagem">
 
                                     <img
                                         src="/assets/img/noticia-floresta.jpg"
                                         alt="Floresta representando a importância da conservação das áreas naturais"
                                     />
 
-                                </div>
-
-                                <div className="card-clima-conteudo">
-
-                                    <span className="card-categoria">
+                                    <span>
                                         Natureza
                                     </span>
+
+                                </div>
+
+                                <div className="home-noticia-conteudo">
 
                                     <h3>
                                         Preservação das florestas
@@ -369,7 +443,7 @@ function Home() {
 
                                     <Link to="/noticias">
                                         Ler mais
-                                        <i className="bi bi-arrow-right ms-2"></i>
+                                        <i className="bi bi-arrow-right"></i>
                                     </Link>
 
                                 </div>
@@ -381,14 +455,14 @@ function Home() {
                     </div>
 
 
-                    <div className="text-center mt-5">
+                    <div className="text-center home-ver-mais">
 
                         <Link
                             to="/noticias"
-                            className="btn btn-success rounded-pill px-4"
+                            className="home-link-botao"
                         >
                             Ver todas as notícias
-                            <i className="bi bi-arrow-right ms-1"></i>
+                            <i className="bi bi-arrow-right"></i>
                         </Link>
 
                     </div>
@@ -401,19 +475,22 @@ function Home() {
                 DICAS
             ====================================================== */}
             <section
-                className="secao"
+                className="home-dicas-secao"
                 aria-labelledby="titulo-dicas"
             >
                 <div className="container">
 
-                    <div className="titulo-secao">
+                    <div className="home-cabecalho-centralizado">
 
-                        <span className="etiqueta">
-                            Ações simples
+                        <span className="home-secao-etiqueta">
+                            AÇÕES SIMPLES
                         </span>
 
-                        <h2 id="titulo-dicas">
-                            Dicas para uma rotina mais sustentável
+                        <h2
+                            id="titulo-dicas"
+                            className="home-titulo"
+                        >
+                            Uma rotina mais sustentável
                         </h2>
 
                         <p>
@@ -427,11 +504,10 @@ function Home() {
                     <div className="row g-4">
 
                         <div className="col-sm-6 col-lg-4">
+                            <article className="home-dica-card">
 
-                            <article className="dica-card">
-
-                                <div className="dica-icone">
-                                    <i className="bi bi-lightbulb"></i>
+                                <div className="home-dica-icone">
+                                    <i className="bi bi-lightbulb-fill"></i>
                                 </div>
 
                                 <h3>
@@ -445,15 +521,13 @@ function Home() {
                                 </p>
 
                             </article>
-
                         </div>
 
 
                         <div className="col-sm-6 col-lg-4">
+                            <article className="home-dica-card">
 
-                            <article className="dica-card">
-
-                                <div className="dica-icone">
+                                <div className="home-dica-icone">
                                     <i className="bi bi-recycle"></i>
                                 </div>
 
@@ -467,16 +541,14 @@ function Home() {
                                 </p>
 
                             </article>
-
                         </div>
 
 
                         <div className="col-sm-6 col-lg-4">
+                            <article className="home-dica-card">
 
-                            <article className="dica-card">
-
-                                <div className="dica-icone">
-                                    <i className="bi bi-droplet"></i>
+                                <div className="home-dica-icone">
+                                    <i className="bi bi-droplet-fill"></i>
                                 </div>
 
                                 <h3>
@@ -489,20 +561,18 @@ function Home() {
                                 </p>
 
                             </article>
-
                         </div>
 
 
                         <div className="col-sm-6 col-lg-4">
+                            <article className="home-dica-card">
 
-                            <article className="dica-card">
-
-                                <div className="dica-icone">
+                                <div className="home-dica-icone">
                                     <i className="bi bi-bicycle"></i>
                                 </div>
 
                                 <h3>
-                                    Escolha transportes sustentáveis
+                                    Transporte sustentável
                                 </h3>
 
                                 <p>
@@ -511,16 +581,14 @@ function Home() {
                                 </p>
 
                             </article>
-
                         </div>
 
 
                         <div className="col-sm-6 col-lg-4">
+                            <article className="home-dica-card">
 
-                            <article className="dica-card">
-
-                                <div className="dica-icone">
-                                    <i className="bi bi-tree"></i>
+                                <div className="home-dica-icone">
+                                    <i className="bi bi-tree-fill"></i>
                                 </div>
 
                                 <h3>
@@ -533,16 +601,14 @@ function Home() {
                                 </p>
 
                             </article>
-
                         </div>
 
 
                         <div className="col-sm-6 col-lg-4">
+                            <article className="home-dica-card">
 
-                            <article className="dica-card">
-
-                                <div className="dica-icone">
-                                    <i className="bi bi-bag-heart"></i>
+                                <div className="home-dica-icone">
+                                    <i className="bi bi-bag-heart-fill"></i>
                                 </div>
 
                                 <h3>
@@ -555,20 +621,19 @@ function Home() {
                                 </p>
 
                             </article>
-
                         </div>
 
                     </div>
 
 
-                    <div className="text-center mt-5">
+                    <div className="text-center home-ver-mais">
 
                         <Link
                             to="/dicas"
-                            className="btn btn-success rounded-pill px-4"
+                            className="home-link-botao"
                         >
                             Ver todas as dicas
-                            <i className="bi bi-arrow-right ms-1"></i>
+                            <i className="bi bi-arrow-right"></i>
                         </Link>
 
                     </div>
@@ -581,19 +646,20 @@ function Home() {
                 SIMULADOR
             ====================================================== */}
             <section
-                className="secao secao-verde"
+                className="home-simulador-secao"
                 aria-labelledby="titulo-simulador"
             >
                 <div className="container">
 
-                    <div className="simulador-box">
+                    <div className="home-simulador-box">
 
                         <div className="row align-items-center g-5">
 
                             <div className="col-lg-5">
 
-                                <span className="badge bg-light text-success mb-3">
-                                    Em desenvolvimento
+                                <span className="home-simulador-badge">
+                                    <i className="bi bi-stars me-1"></i>
+                                    Interatividade
                                 </span>
 
                                 <h2 id="titulo-simulador">
@@ -601,18 +667,17 @@ function Home() {
                                 </h2>
 
                                 <p>
-                                    Nosso simulador foi pensado para mostrar
-                                    como pequenas mudanças na rotina podem
-                                    contribuir para a redução do impacto
-                                    ambiental.
+                                    Nosso simulador mostra como pequenas
+                                    mudanças na rotina podem contribuir
+                                    para a redução do impacto ambiental.
                                 </p>
 
                                 <Link
                                     to="/simulador"
-                                    className="btn btn-light text-success rounded-pill px-4 mt-2"
+                                    className="home-simulador-btn"
                                 >
                                     Conhecer o simulador
-                                    <i className="bi bi-arrow-right ms-1"></i>
+                                    <i className="bi bi-arrow-right"></i>
                                 </Link>
 
                             </div>
@@ -623,78 +688,51 @@ function Home() {
                                 <div className="row g-3">
 
                                     <div className="col-sm-6">
-
-                                        <div className="simulador-item">
-
-                                            <i className="bi bi-lightning-charge"></i>
-
-                                            <h3>
-                                                Energia
-                                            </h3>
-
-                                            <p>
-                                                Hábitos de consumo consciente.
-                                            </p>
-
+                                        <div className="home-simulador-item">
+                                            <i className="bi bi-lightning-charge-fill"></i>
+                                            <div>
+                                                <h3>Energia</h3>
+                                                <p>
+                                                    Hábitos de consumo consciente.
+                                                </p>
+                                            </div>
                                         </div>
-
                                     </div>
 
-
                                     <div className="col-sm-6">
-
-                                        <div className="simulador-item">
-
+                                        <div className="home-simulador-item">
                                             <i className="bi bi-bicycle"></i>
-
-                                            <h3>
-                                                Transporte
-                                            </h3>
-
-                                            <p>
-                                                Escolhas de mobilidade sustentável.
-                                            </p>
-
+                                            <div>
+                                                <h3>Transporte</h3>
+                                                <p>
+                                                    Escolhas de mobilidade sustentável.
+                                                </p>
+                                            </div>
                                         </div>
-
                                     </div>
 
-
                                     <div className="col-sm-6">
-
-                                        <div className="simulador-item">
-
-                                            <i className="bi bi-droplet"></i>
-
-                                            <h3>
-                                                Água
-                                            </h3>
-
-                                            <p>
-                                                Redução do desperdício.
-                                            </p>
-
+                                        <div className="home-simulador-item">
+                                            <i className="bi bi-droplet-fill"></i>
+                                            <div>
+                                                <h3>Água</h3>
+                                                <p>
+                                                    Redução do desperdício.
+                                                </p>
+                                            </div>
                                         </div>
-
                                     </div>
 
-
                                     <div className="col-sm-6">
-
-                                        <div className="simulador-item">
-
-                                            <i className="bi bi-tree"></i>
-
-                                            <h3>
-                                                Natureza
-                                            </h3>
-
-                                            <p>
-                                                Preservação das áreas verdes.
-                                            </p>
-
+                                        <div className="home-simulador-item">
+                                            <i className="bi bi-tree-fill"></i>
+                                            <div>
+                                                <h3>Natureza</h3>
+                                                <p>
+                                                    Preservação das áreas verdes.
+                                                </p>
+                                            </div>
                                         </div>
-
                                     </div>
 
                                 </div>
@@ -713,20 +751,25 @@ function Home() {
                 CAMPANHAS
             ====================================================== */}
             <section
-                className="secao"
+                className="home-campanhas-secao"
                 aria-labelledby="titulo-campanhas"
             >
                 <div className="container">
 
-                    <div className="titulo-secao">
+                    <div className="home-cabecalho-secao">
 
-                        <span className="etiqueta">
-                            Participação
-                        </span>
+                        <div>
+                            <span className="home-secao-etiqueta">
+                                PARTICIPAÇÃO
+                            </span>
 
-                        <h2 id="titulo-campanhas">
-                            Campanhas e ações
-                        </h2>
+                            <h2
+                                id="titulo-campanhas"
+                                className="home-titulo"
+                            >
+                                Campanhas e ações
+                            </h2>
+                        </div>
 
                         <p>
                             Ações locais podem transformar comunidades
@@ -739,92 +782,89 @@ function Home() {
                     <div className="row g-4">
 
                         <div className="col-md-4">
+                            <article className="home-campanha-card">
 
-                            <article className="campanha-card">
+                                <div className="home-campanha-numero">
+                                    01
+                                </div>
 
-                                <span className="campanha-data">
-                                    Ação ambiental
+                                <span>
+                                    AÇÃO AMBIENTAL
                                 </span>
 
                                 <h3>
                                     Plantio de árvores
                                 </h3>
 
-                                <p className="text-muted">
+                                <p>
                                     Incentivo ao plantio e à preservação
                                     de árvores em espaços urbanos.
                                 </p>
 
-                                <Link
-                                    to="/campanhas"
-                                    className="link-verde"
-                                >
+                                <Link to="/campanhas">
                                     Saiba mais
-                                    <i className="bi bi-arrow-right ms-2"></i>
+                                    <i className="bi bi-arrow-right"></i>
                                 </Link>
 
                             </article>
-
                         </div>
 
 
                         <div className="col-md-4">
+                            <article className="home-campanha-card">
 
-                            <article className="campanha-card">
+                                <div className="home-campanha-numero">
+                                    02
+                                </div>
 
-                                <span className="campanha-data">
-                                    Educação
+                                <span>
+                                    EDUCAÇÃO
                                 </span>
 
                                 <h3>
                                     Educação climática
                                 </h3>
 
-                                <p className="text-muted">
+                                <p>
                                     Ações educativas para incentivar
                                     conhecimento e consciência ambiental.
                                 </p>
 
-                                <Link
-                                    to="/campanhas"
-                                    className="link-verde"
-                                >
+                                <Link to="/campanhas">
                                     Saiba mais
-                                    <i className="bi bi-arrow-right ms-2"></i>
+                                    <i className="bi bi-arrow-right"></i>
                                 </Link>
 
                             </article>
-
                         </div>
 
 
                         <div className="col-md-4">
+                            <article className="home-campanha-card">
 
-                            <article className="campanha-card">
+                                <div className="home-campanha-numero">
+                                    03
+                                </div>
 
-                                <span className="campanha-data">
-                                    Comunidade
+                                <span>
+                                    COMUNIDADE
                                 </span>
 
                                 <h3>
                                     Comunidade sustentável
                                 </h3>
 
-                                <p className="text-muted">
+                                <p>
                                     Mobilização da comunidade para
                                     promover hábitos mais sustentáveis.
                                 </p>
 
-                                <Link
-                                    to="/campanhas"
-                                    className="link-verde"
-                                >
+                                <Link to="/campanhas">
                                     Saiba mais
-                                    <i className="bi bi-arrow-right ms-2"></i>
+                                    <i className="bi bi-arrow-right"></i>
                                 </Link>
 
                             </article>
-
                         </div>
 
                     </div>
@@ -837,31 +877,46 @@ function Home() {
                 CTA FINAL
             ====================================================== */}
             <section
-                className="cta"
+                className="home-cta"
                 aria-labelledby="titulo-cta"
             >
-                <div className="container text-center">
+                <div className="home-cta-circulo"></div>
 
-                    <h2 id="titulo-cta">
-                        O futuro também depende das nossas escolhas.
-                    </h2>
+                <div className="container">
 
-                    <p className="mt-3 mb-4">
-                        Informe-se, compartilhe conhecimento e faça
-                        parte da mudança.
-                    </p>
+                    <div className="home-cta-conteudo">
 
-                    <Link
-                        to="/contato"
-                        className="btn btn-light text-primary rounded-pill px-4"
-                    >
-                        Entre em contato
-                        <i className="bi bi-arrow-right ms-1"></i>
-                    </Link>
+                        <div className="home-cta-icone">
+                            <i className="bi bi-globe-americas"></i>
+                        </div>
+
+                        <span>
+                            CLIMACONSCIENTE • ODS 13
+                        </span>
+
+                        <h2 id="titulo-cta">
+                            O futuro também depende
+                            <strong> das nossas escolhas.</strong>
+                        </h2>
+
+                        <p>
+                            Informe-se, compartilhe conhecimento e faça
+                            parte da mudança por um planeta mais consciente
+                            e sustentável.
+                        </p>
+
+                        <Link
+                            to="/contato"
+                            className="home-cta-btn"
+                        >
+                            Entre em contato
+                            <i className="bi bi-arrow-right"></i>
+                        </Link>
+
+                    </div>
 
                 </div>
             </section>
-
         </>
     );
 }

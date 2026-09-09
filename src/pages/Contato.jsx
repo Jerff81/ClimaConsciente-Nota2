@@ -10,16 +10,22 @@ function Contato() {
 
     const [enviado, setEnviado] = useState(false);
 
-    const handleChange = (event) => {
+    function handleChange(event) {
         const { name, value } = event.target;
 
-        setFormulario((dadosAtuais) => ({
-            ...dadosAtuais,
-            [name]: value,
-        }));
-    };
+        setFormulario(function (dadosAtuais) {
+            return {
+                ...dadosAtuais,
+                [name]: value,
+            };
+        });
 
-    const handleSubmit = (event) => {
+        if (enviado) {
+            setEnviado(false);
+        }
+    }
+
+    function handleSubmit(event) {
         event.preventDefault();
 
         setEnviado(true);
@@ -30,134 +36,242 @@ function Contato() {
             assunto: "",
             mensagem: "",
         });
-    };
+    }
 
     return (
         <>
             {/* =====================================================
-                CABEÇALHO DA PÁGINA
+                HERO
             ====================================================== */}
-            <section className="pagina-hero">
+            <section className="contato-hero">
+
+                <div className="contato-hero-circulo contato-circulo-1"></div>
+                <div className="contato-hero-circulo contato-circulo-2"></div>
+
                 <div className="container">
 
-                    <div className="pagina-hero-conteudo">
+                    <div className="row align-items-center">
 
-                        <span className="etiqueta">
-                            <i className="bi bi-envelope me-2"></i>
-                            Fale conosco
-                        </span>
+                        <div className="col-lg-7">
 
-                        <h1>
-                            Entre em contato
-                        </h1>
+                            <div className="contato-hero-conteudo">
 
-                        <p>
-                            Envie sua mensagem, dúvida ou sugestão
-                            sobre o projeto ClimaConsciente.
-                        </p>
+                                <span className="contato-badge">
+                                    <i
+                                        className="bi bi-envelope-heart-fill me-2"
+                                        aria-hidden="true"
+                                    ></i>
+                                    Fale conosco
+                                </span>
+
+                                <span className="contato-mini-titulo">
+                                    CLIMACONSCIENTE • CONEXÃO
+                                </span>
+
+                                <h1>
+                                    Sua voz também
+                                    <span> faz diferença.</span>
+                                </h1>
+
+                                <p>
+                                    Envie sua dúvida, sugestão ou mensagem
+                                    sobre o projeto ClimaConsciente.
+                                    Sua participação ajuda a fortalecer a
+                                    conscientização ambiental.
+                                </p>
+
+                                <div className="contato-hero-destaques">
+
+                                    <div>
+                                        <i className="bi bi-chat-dots-fill"></i>
+                                        <span>Converse</span>
+                                    </div>
+
+                                    <div>
+                                        <i className="bi bi-lightbulb-fill"></i>
+                                        <span>Compartilhe</span>
+                                    </div>
+
+                                    <div>
+                                        <i className="bi bi-people-fill"></i>
+                                        <span>Participe</span>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <div className="col-lg-5 d-none d-lg-block">
+
+                            <div className="contato-hero-visual">
+
+                                <div className="contato-visual-orbita"></div>
+
+                                <div className="contato-visual-centro">
+
+                                    <i className="bi bi-globe-americas"></i>
+
+                                    <strong>13</strong>
+
+                                    <span>ODS</span>
+
+                                </div>
+
+                                <div className="contato-flutuante contato-flutuante-1">
+                                    <i className="bi bi-envelope"></i>
+                                    <span>MENSAGEM</span>
+                                </div>
+
+                                <div className="contato-flutuante contato-flutuante-2">
+                                    <i className="bi bi-chat-heart"></i>
+                                    <span>DIÁLOGO</span>
+                                </div>
+
+                                <div className="contato-flutuante contato-flutuante-3">
+                                    <i className="bi bi-people"></i>
+                                    <span>PARTICIPAÇÃO</span>
+                                </div>
+
+                            </div>
+
+                        </div>
 
                     </div>
 
                 </div>
+
             </section>
 
 
             {/* =====================================================
-                ÁREA DE CONTATO
+                ÁREA PRINCIPAL
             ====================================================== */}
             <section
-                className="secao"
+                className="contato-area"
                 aria-labelledby="titulo-contato"
             >
+
                 <div className="container">
 
-                    <div className="row g-5 align-items-start">
+                    <div className="contato-introducao">
+
+                        <div>
+
+                            <span className="contato-etiqueta">
+                                CLIMACONSCIENTE
+                            </span>
+
+                            <h2 id="titulo-contato">
+                                Vamos conversar sobre
+                                <span> sustentabilidade?</span>
+                            </h2>
+
+                        </div>
+
+                        <p>
+                            Entre em contato para compartilhar ideias,
+                            dúvidas ou sugestões relacionadas ao projeto
+                            e ao ODS 13.
+                        </p>
+
+                    </div>
+
+
+                    <div className="row g-4 align-items-stretch">
 
                         {/* =================================================
                             INFORMAÇÕES
                         ================================================== */}
                         <div className="col-lg-5">
 
-                            <div className="titulo-secao mb-4">
+                            <div className="contato-info-card">
 
-                                <span className="etiqueta">
-                                    ClimaConsciente
-                                </span>
+                                <div className="contato-info-topo">
 
-                                <h2 id="titulo-contato">
-                                    Como podemos ajudar?
-                                </h2>
+                                    <span>
+                                        FALE COM A GENTE
+                                    </span>
 
-                                <p>
-                                    Sua participação é importante para
-                                    fortalecer a conscientização sobre
-                                    as mudanças climáticas.
-                                </p>
-
-                            </div>
-
-
-                            {/* E-MAIL */}
-
-                            <div className="contato-info">
-
-                                <div className="contato-info-icone">
-                                    <i className="bi bi-envelope"></i>
-                                </div>
-
-                                <div>
                                     <h3>
-                                        E-mail
+                                        Toda conversa pode
+                                        <strong> gerar uma ação.</strong>
                                     </h3>
 
                                     <p>
-                                        Entre em contato por meio do
-                                        formulário ao lado.
+                                        O ClimaConsciente busca aproximar
+                                        informação e participação. Use este
+                                        espaço para fazer parte dessa ideia.
                                     </p>
+
                                 </div>
 
-                            </div>
 
+                                <div className="contato-info-item">
 
-                            {/* ODS */}
+                                    <div className="contato-info-icone">
+                                        <i className="bi bi-envelope-fill"></i>
+                                    </div>
 
-                            <div className="contato-info">
+                                    <div>
+                                        <span>CONTATO</span>
+                                        <strong>E-mail</strong>
+                                        <p>
+                                            Envie sua mensagem pelo formulário
+                                            ao lado.
+                                        </p>
+                                    </div>
 
-                                <div className="contato-info-icone">
-                                    <i className="bi bi-globe2"></i>
                                 </div>
 
-                                <div>
-                                    <h3>
-                                        ODS 13
-                                    </h3>
+
+                                <div className="contato-info-item">
+
+                                    <div className="contato-info-icone">
+                                        <i className="bi bi-globe2"></i>
+                                    </div>
+
+                                    <div>
+                                        <span>OBJETIVO</span>
+                                        <strong>ODS 13</strong>
+                                        <p>
+                                            Ação Contra a Mudança Global
+                                            do Clima.
+                                        </p>
+                                    </div>
+
+                                </div>
+
+
+                                <div className="contato-info-item">
+
+                                    <div className="contato-info-icone">
+                                        <i className="bi bi-people-fill"></i>
+                                    </div>
+
+                                    <div>
+                                        <span>PARTICIPAÇÃO</span>
+                                        <strong>Faça parte</strong>
+                                        <p>
+                                            Compartilhe ideias e ajude a
+                                            promover atitudes sustentáveis.
+                                        </p>
+                                    </div>
+
+                                </div>
+
+
+                                <div className="contato-info-frase">
+
+                                    <i className="bi bi-quote"></i>
 
                                     <p>
-                                        Ação Contra a Mudança Global
-                                        do Clima.
+                                        A mudança começa quando
+                                        transformamos informação em atitude.
                                     </p>
-                                </div>
 
-                            </div>
-
-
-                            {/* PARTICIPAÇÃO */}
-
-                            <div className="contato-info">
-
-                                <div className="contato-info-icone">
-                                    <i className="bi bi-people"></i>
-                                </div>
-
-                                <div>
-                                    <h3>
-                                        Participe
-                                    </h3>
-
-                                    <p>
-                                        Compartilhe ideias e ajude a
-                                        promover atitudes sustentáveis.
-                                    </p>
                                 </div>
 
                             </div>
@@ -172,27 +286,57 @@ function Contato() {
 
                             <div className="contato-form-card">
 
-                                <h2>
-                                    Envie sua mensagem
-                                </h2>
+                                <div className="contato-form-cabecalho">
 
-                                <p className="text-muted mb-4">
-                                    Preencha os campos abaixo.
-                                </p>
+                                    <div className="contato-form-icone">
+                                        <i className="bi bi-send-fill"></i>
+                                    </div>
+
+                                    <div>
+
+                                        <span>
+                                            ENVIE UMA MENSAGEM
+                                        </span>
+
+                                        <h3>
+                                            Como podemos ajudar?
+                                        </h3>
+
+                                    </div>
+
+                                </div>
+
+
+                                <div className="contato-form-intro">
+                                    Preencha os campos abaixo. Todos os
+                                    campos são importantes para facilitar
+                                    o entendimento da sua mensagem.
+                                </div>
 
 
                                 {/* MENSAGEM DE SUCESSO */}
-
                                 {enviado && (
                                     <div
-                                        className="alert alert-success d-flex align-items-center"
+                                        className="contato-sucesso"
                                         role="alert"
                                     >
 
-                                        <i className="bi bi-check-circle-fill me-2"></i>
+                                        <div className="contato-sucesso-icone">
+                                            <i className="bi bi-check-lg"></i>
+                                        </div>
 
                                         <div>
-                                            Mensagem enviada com sucesso!
+
+                                            <strong>
+                                                Mensagem enviada!
+                                            </strong>
+
+                                            <p>
+                                                Obrigado pela participação.
+                                                Sua mensagem foi registrada
+                                                com sucesso.
+                                            </p>
+
                                         </div>
 
                                     </div>
@@ -201,142 +345,168 @@ function Contato() {
 
                                 <form onSubmit={handleSubmit}>
 
-                                    {/* NOME */}
+                                    <div className="row g-3">
 
-                                    <div className="mb-3">
+                                        {/* NOME */}
+                                        <div className="col-md-6">
 
-                                        <label
-                                            htmlFor="nome"
-                                            className="form-label"
-                                        >
-                                            Nome
-                                        </label>
+                                            <div className="contato-campo">
 
-                                        <input
-                                            type="text"
-                                            id="nome"
-                                            name="nome"
-                                            className="form-control"
-                                            placeholder="Digite seu nome"
-                                            value={formulario.nome}
-                                            onChange={handleChange}
-                                            required
-                                        />
+                                                <label
+                                                    htmlFor="nome"
+                                                >
+                                                    <i className="bi bi-person-fill"></i>
+                                                    Nome
+                                                </label>
 
-                                    </div>
+                                                <input
+                                                    type="text"
+                                                    id="nome"
+                                                    name="nome"
+                                                    placeholder="Digite seu nome"
+                                                    value={formulario.nome}
+                                                    onChange={handleChange}
+                                                    required
+                                                />
 
+                                            </div>
 
-                                    {/* E-MAIL */}
-
-                                    <div className="mb-3">
-
-                                        <label
-                                            htmlFor="email"
-                                            className="form-label"
-                                        >
-                                            E-mail
-                                        </label>
-
-                                        <input
-                                            type="email"
-                                            id="email"
-                                            name="email"
-                                            className="form-control"
-                                            placeholder="Digite seu e-mail"
-                                            value={formulario.email}
-                                            onChange={handleChange}
-                                            required
-                                        />
-
-                                    </div>
+                                        </div>
 
 
-                                    {/* ASSUNTO */}
+                                        {/* E-MAIL */}
+                                        <div className="col-md-6">
 
-                                    <div className="mb-3">
+                                            <div className="contato-campo">
 
-                                        <label
-                                            htmlFor="assunto"
-                                            className="form-label"
-                                        >
-                                            Assunto
-                                        </label>
+                                                <label
+                                                    htmlFor="email"
+                                                >
+                                                    <i className="bi bi-envelope-fill"></i>
+                                                    E-mail
+                                                </label>
 
-                                        <select
-                                            id="assunto"
-                                            name="assunto"
-                                            className="form-select"
-                                            value={formulario.assunto}
-                                            onChange={handleChange}
-                                            required
-                                        >
+                                                <input
+                                                    type="email"
+                                                    id="email"
+                                                    name="email"
+                                                    placeholder="Digite seu e-mail"
+                                                    value={formulario.email}
+                                                    onChange={handleChange}
+                                                    required
+                                                />
 
-                                            <option value="">
-                                                Selecione um assunto
-                                            </option>
+                                            </div>
 
-                                            <option value="duvida">
-                                                Dúvida
-                                            </option>
-
-                                            <option value="sugestao">
-                                                Sugestão
-                                            </option>
-
-                                            <option value="projeto">
-                                                Sobre o projeto
-                                            </option>
-
-                                            <option value="ods13">
-                                                ODS 13
-                                            </option>
-
-                                            <option value="outro">
-                                                Outro
-                                            </option>
-
-                                        </select>
-
-                                    </div>
+                                        </div>
 
 
-                                    {/* MENSAGEM */}
+                                        {/* ASSUNTO */}
+                                        <div className="col-12">
 
-                                    <div className="mb-4">
+                                            <div className="contato-campo">
 
-                                        <label
-                                            htmlFor="mensagem"
-                                            className="form-label"
-                                        >
-                                            Mensagem
-                                        </label>
+                                                <label
+                                                    htmlFor="assunto"
+                                                >
+                                                    <i className="bi bi-chat-left-text-fill"></i>
+                                                    Assunto
+                                                </label>
 
-                                        <textarea
-                                            id="mensagem"
-                                            name="mensagem"
-                                            className="form-control"
-                                            rows="6"
-                                            placeholder="Digite sua mensagem"
-                                            value={formulario.mensagem}
-                                            onChange={handleChange}
-                                            required
-                                        ></textarea>
+                                                <select
+                                                    id="assunto"
+                                                    name="assunto"
+                                                    value={formulario.assunto}
+                                                    onChange={handleChange}
+                                                    required
+                                                >
+
+                                                    <option value="">
+                                                        Selecione um assunto
+                                                    </option>
+
+                                                    <option value="duvida">
+                                                        Dúvida
+                                                    </option>
+
+                                                    <option value="sugestao">
+                                                        Sugestão
+                                                    </option>
+
+                                                    <option value="projeto">
+                                                        Sobre o projeto
+                                                    </option>
+
+                                                    <option value="ods13">
+                                                        ODS 13
+                                                    </option>
+
+                                                    <option value="outro">
+                                                        Outro
+                                                    </option>
+
+                                                </select>
+
+                                            </div>
+
+                                        </div>
+
+
+                                        {/* MENSAGEM */}
+                                        <div className="col-12">
+
+                                            <div className="contato-campo">
+
+                                                <label
+                                                    htmlFor="mensagem"
+                                                >
+                                                    <i className="bi bi-pencil-square"></i>
+                                                    Mensagem
+                                                </label>
+
+                                                <textarea
+                                                    id="mensagem"
+                                                    name="mensagem"
+                                                    rows="6"
+                                                    placeholder="Escreva sua mensagem..."
+                                                    value={formulario.mensagem}
+                                                    onChange={handleChange}
+                                                    required
+                                                ></textarea>
+
+                                                <small>
+                                                    Compartilhe sua dúvida,
+                                                    ideia ou sugestão.
+                                                </small>
+
+                                            </div>
+
+                                        </div>
 
                                     </div>
 
 
                                     {/* BOTÃO */}
+                                    <div className="contato-form-rodape">
 
-                                    <button
-                                        type="submit"
-                                        className="btn btn-success rounded-pill px-4"
-                                    >
+                                        <span>
+                                            <i className="bi bi-shield-check me-1"></i>
+                                            Sua mensagem será utilizada
+                                            apenas para fins do projeto.
+                                        </span>
 
-                                        <i className="bi bi-send me-2"></i>
+                                        <button
+                                            type="submit"
+                                            className="contato-btn-enviar"
+                                        >
 
-                                        Enviar mensagem
+                                            Enviar mensagem
 
-                                    </button>
+                                            <i className="bi bi-arrow-right"></i>
+
+                                        </button>
+
+                                    </div>
 
                                 </form>
 
@@ -347,29 +517,41 @@ function Contato() {
                     </div>
 
                 </div>
+
             </section>
 
 
             {/* =====================================================
-                CTA
+                CTA FINAL
             ====================================================== */}
-            <section className="cta">
+            <section className="contato-final">
 
-                <div className="container text-center">
+                <div className="contato-final-circulo"></div>
 
-                    <i
-                        className="bi bi-globe-americas"
-                        style={{ fontSize: "3rem" }}
-                    ></i>
+                <div className="container">
 
-                    <h2 className="mt-3">
-                        Juntos podemos fazer a diferença
-                    </h2>
+                    <div className="contato-final-conteudo">
 
-                    <p className="mt-3 mb-0">
-                        A mudança começa com informação,
-                        conscientização e pequenas atitudes.
-                    </p>
+                        <div className="contato-final-icone">
+                            <i className="bi bi-globe-americas"></i>
+                        </div>
+
+                        <span>
+                            CLIMACONSCIENTE • ODS 13
+                        </span>
+
+                        <h2>
+                            Uma ideia pode começar
+                            <strong> com uma mensagem.</strong>
+                        </h2>
+
+                        <p>
+                            Informação, diálogo e participação são
+                            importantes para construir uma sociedade
+                            mais consciente e sustentável.
+                        </p>
+
+                    </div>
 
                 </div>
 

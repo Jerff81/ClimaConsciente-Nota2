@@ -1,64 +1,163 @@
 import { Link } from "react-router-dom";
 
-function Ods13() {
-    const metas = [
-        {
-            numero: "13.1",
-            titulo: "Resiliência",
-            texto:
-                "Fortalecer a resiliência e a capacidade de adaptação a riscos relacionados ao clima.",
-            icone: "bi-shield-check",
-        },
-        {
-            numero: "13.2",
-            titulo: "Políticas climáticas",
-            texto:
-                "Integrar medidas relacionadas às mudanças climáticas nas políticas e planejamentos.",
-            icone: "bi-bank",
-        },
-        {
-            numero: "13.3",
-            titulo: "Educação e conscientização",
-            texto:
-                "Melhorar a educação, a conscientização e a capacidade das pessoas para enfrentar as mudanças climáticas.",
-            icone: "bi-mortarboard",
-        },
-    ];
+const METAS = [
+    {
+        numero: "13.1",
+        titulo: "Resiliência",
+        texto:
+            "Fortalecer a resiliência e a capacidade de adaptação a riscos relacionados ao clima.",
+        icone: "bi-shield-check",
+    },
+    {
+        numero: "13.2",
+        titulo: "Políticas climáticas",
+        texto:
+            "Integrar medidas relacionadas às mudanças climáticas nas políticas e planejamentos.",
+        icone: "bi-bank",
+    },
+    {
+        numero: "13.3",
+        titulo: "Educação e conscientização",
+        texto:
+            "Melhorar a educação, a conscientização e a capacidade das pessoas para enfrentar as mudanças climáticas.",
+        icone: "bi-mortarboard",
+    },
+];
 
+function Ods13() {
     return (
         <>
-            <section className="pagina-hero">
+            {/* =====================================================
+                HERO ODS 13
+            ====================================================== */}
+
+            <section className="ods13-hero">
+
+                <div className="ods13-hero-circulo ods13-circulo-1"></div>
+                <div className="ods13-hero-circulo ods13-circulo-2"></div>
+
                 <div className="container">
-                    <div className="pagina-hero-conteudo">
 
-                        <span className="etiqueta">
-                            <i className="bi bi-globe-americas me-2"></i>
-                            Objetivo de Desenvolvimento Sustentável
-                        </span>
+                    <div className="row align-items-center">
 
-                        <h1>ODS 13</h1>
+                        <div className="col-lg-7">
 
-                        <p>
-                            Ação Contra a Mudança Global do Clima.
-                        </p>
+                            <div className="ods13-hero-conteudo">
+
+                                <span className="ods13-badge">
+                                    <i
+                                        className="bi bi-globe-americas me-2"
+                                        aria-hidden="true"
+                                    ></i>
+                                    Objetivo de Desenvolvimento Sustentável
+                                </span>
+
+                                <div className="ods13-identificacao">
+                                    <span>ODS</span>
+                                    <strong>13</strong>
+                                </div>
+
+                                <h1>
+                                    Ação contra a mudança
+                                    <span> global do clima</span>
+                                </h1>
+
+                                <p>
+                                    Tomar medidas urgentes para combater a
+                                    mudança do clima e seus impactos.
+                                </p>
+
+                                <div className="ods13-hero-botoes">
+
+                                    <a
+                                        href="#sobre-ods13"
+                                        className="btn ods13-btn-principal"
+                                    >
+                                        Conheça o ODS 13
+                                        <i
+                                            className="bi bi-arrow-down ms-2"
+                                            aria-hidden="true"
+                                        ></i>
+                                    </a>
+
+                                    <Link
+                                        to="/dicas"
+                                        className="btn ods13-btn-secundario"
+                                    >
+                                        Ver dicas sustentáveis
+                                        <i
+                                            className="bi bi-arrow-right ms-2"
+                                            aria-hidden="true"
+                                        ></i>
+                                    </Link>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div className="col-lg-5 d-none d-lg-block">
+
+                            <div className="ods13-planeta">
+
+                                <div className="ods13-orbita ods13-orbita-1"></div>
+                                <div className="ods13-orbita ods13-orbita-2"></div>
+
+                                <div className="ods13-planeta-circulo">
+
+                                    <i
+                                        className="bi bi-globe-americas"
+                                        aria-hidden="true"
+                                    ></i>
+
+                                    <strong>13</strong>
+
+                                    <span>CLIMA</span>
+
+                                </div>
+
+                                <div className="ods13-folha ods13-folha-a">
+                                    <i className="bi bi-leaf-fill"></i>
+                                </div>
+
+                                <div className="ods13-folha ods13-folha-b">
+                                    <i className="bi bi-tree-fill"></i>
+                                </div>
+
+                            </div>
+
+                        </div>
 
                     </div>
+
                 </div>
+
             </section>
 
-            <section className="secao">
+
+            {/* =====================================================
+                INTRODUÇÃO
+            ====================================================== */}
+
+            <section
+                className="ods13-introducao"
+                id="sobre-ods13"
+            >
+
                 <div className="container">
 
                     <div className="row align-items-center g-5">
 
-                        <div className="col-lg-6">
+                        <div className="col-lg-7">
 
-                            <span className="etiqueta">
-                                ODS 13
+                            <span className="ods13-etiqueta">
+                                SOBRE O ODS 13
                             </span>
 
-                            <h2 className="mt-3">
-                                Ação Contra a Mudança Global do Clima
+                            <h2>
+                                Um objetivo global para
+                                <span> proteger o clima</span>
                             </h2>
 
                             <p>
@@ -76,30 +175,42 @@ function Ods13() {
 
                             <Link
                                 to="/dicas"
-                                className="btn btn-success rounded-pill px-4 mt-2"
+                                className="btn ods13-btn-verde"
                             >
-                                Ver dicas sustentáveis
-                                <i className="bi bi-arrow-right ms-2"></i>
+                                Descobrir atitudes sustentáveis
+                                <i
+                                    className="bi bi-arrow-right ms-2"
+                                    aria-hidden="true"
+                                ></i>
                             </Link>
 
                         </div>
 
-                        <div className="col-lg-6">
+                        <div className="col-lg-5">
 
-                            <div className="ods-card">
+                            <div className="ods13-frase-card">
 
-                                <div className="ods-numero">
-                                    13
+                                <div className="ods13-frase-icone">
+                                    <i className="bi bi-cloud-sun-fill"></i>
                                 </div>
 
+                                <span>ODS 13</span>
+
                                 <h3>
-                                    Ação Contra a Mudança Global do Clima
+                                    O clima precisa de ação.
                                 </h3>
 
                                 <p>
-                                    Tomar medidas urgentes para combater
-                                    a mudança do clima e seus impactos.
+                                    Conhecimento, planejamento e participação
+                                    são fundamentais para enfrentar os
+                                    desafios climáticos.
                                 </p>
+
+                                <div className="ods13-frase-linha"></div>
+
+                                <small>
+                                    ClimaConsciente
+                                </small>
 
                             </div>
 
@@ -108,57 +219,89 @@ function Ods13() {
                     </div>
 
                 </div>
+
             </section>
 
-            <section className="secao secao-clara">
+
+            {/* =====================================================
+                METAS
+            ====================================================== */}
+
+            <section className="ods13-metas">
 
                 <div className="container">
 
-                    <div className="titulo-secao mb-5">
+                    <div className="ods13-titulo-secao">
 
-                        <span className="etiqueta">
-                            Principais metas
+                        <span className="ods13-etiqueta">
+                            PRINCIPAIS METAS
                         </span>
 
                         <h2>
-                            Como o ODS 13 pode ser colocado em prática?
+                            Como o ODS 13 pode ser
+                            <span> colocado em prática?</span>
                         </h2>
 
                         <p>
-                            O enfrentamento das mudanças climáticas
-                            depende de ações em diferentes áreas.
+                            O enfrentamento das mudanças climáticas depende
+                            de ações em diferentes áreas.
                         </p>
 
                     </div>
 
+
                     <div className="row g-4">
 
-                        {metas.map((meta) => (
-                            <div
-                                className="col-md-4"
-                                key={meta.numero}
-                            >
-                                <article className="dica-card h-100">
+                        {METAS.map(function (meta, index) {
 
-                                    <div className="dica-icone">
-                                        <i className={`bi ${meta.icone}`}></i>
-                                    </div>
+                            return (
+                                <div
+                                    className="col-md-4"
+                                    key={meta.numero + index}
+                                >
 
-                                    <span className="badge bg-success mb-3">
-                                        {meta.numero}
-                                    </span>
+                                    <article className="ods13-meta-card">
 
-                                    <h3>
-                                        {meta.titulo}
-                                    </h3>
+                                        <div className="ods13-meta-topo">
 
-                                    <p>
-                                        {meta.texto}
-                                    </p>
+                                            <div className="ods13-meta-icone">
 
-                                </article>
-                            </div>
-                        ))}
+                                                <i
+                                                    className={
+                                                        "bi " + meta.icone
+                                                    }
+                                                    aria-hidden="true"
+                                                ></i>
+
+                                            </div>
+
+                                            <span>
+                                                {meta.numero}
+                                            </span>
+
+                                        </div>
+
+                                        <h3>
+                                            {meta.titulo}
+                                        </h3>
+
+                                        <p>
+                                            {meta.texto}
+                                        </p>
+
+                                        <div className="ods13-meta-linha"></div>
+
+                                        <span className="ods13-meta-link">
+                                            Meta do ODS 13
+                                            <i className="bi bi-arrow-up-right"></i>
+                                        </span>
+
+                                    </article>
+
+                                </div>
+                            );
+
+                        })}
 
                     </div>
 
@@ -166,22 +309,44 @@ function Ods13() {
 
             </section>
 
-            <section className="secao">
+
+            {/* =====================================================
+                AÇÕES INDIVIDUAIS E COLETIVAS
+            ====================================================== */}
+
+            <section className="ods13-acoes">
 
                 <div className="container">
 
+                    <div className="ods13-titulo-secao ods13-titulo-esquerda">
+
+                        <span className="ods13-etiqueta">
+                            TODOS PODEM CONTRIBUIR
+                        </span>
+
+                        <h2>
+                            A mudança começa
+                            <span> com a participação.</span>
+                        </h2>
+
+                    </div>
+
+
                     <div className="row g-4">
 
-                        <div className="col-md-6">
+                        <div className="col-lg-6">
 
-                            <div className="p-4 h-100 rounded-4 border">
+                            <article className="ods13-acao-card">
 
-                                <i
-                                    className="bi bi-person-check text-success"
-                                    style={{ fontSize: "2.5rem" }}
-                                ></i>
+                                <div className="ods13-acao-numero">
+                                    01
+                                </div>
 
-                                <h3 className="mt-3">
+                                <div className="ods13-acao-icone">
+                                    <i className="bi bi-person-check-fill"></i>
+                                </div>
+
+                                <h3>
                                     O que cada pessoa pode fazer?
                                 </h3>
 
@@ -192,20 +357,32 @@ function Ods13() {
                                     são exemplos de atitudes possíveis.
                                 </p>
 
-                            </div>
+                                <Link
+                                    to="/dicas"
+                                    className="ods13-acao-link"
+                                >
+                                    Ver dicas
+                                    <i className="bi bi-arrow-right"></i>
+                                </Link>
+
+                            </article>
 
                         </div>
 
-                        <div className="col-md-6">
 
-                            <div className="p-4 h-100 rounded-4 border">
+                        <div className="col-lg-6">
 
-                                <i
-                                    className="bi bi-people text-success"
-                                    style={{ fontSize: "2.5rem" }}
-                                ></i>
+                            <article className="ods13-acao-card ods13-acao-card-destaque">
 
-                                <h3 className="mt-3">
+                                <div className="ods13-acao-numero">
+                                    02
+                                </div>
+
+                                <div className="ods13-acao-icone">
+                                    <i className="bi bi-people-fill"></i>
+                                </div>
+
+                                <h3>
                                     A importância da participação
                                 </h3>
 
@@ -216,7 +393,15 @@ function Ods13() {
                                     e ampliar a conscientização.
                                 </p>
 
-                            </div>
+                                <Link
+                                    to="/campanhas"
+                                    className="ods13-acao-link"
+                                >
+                                    Participar de campanhas
+                                    <i className="bi bi-arrow-right"></i>
+                                </Link>
+
+                            </article>
 
                         </div>
 
@@ -226,26 +411,49 @@ function Ods13() {
 
             </section>
 
-            <section className="cta">
 
-                <div className="container text-center">
+            {/* =====================================================
+                CTA FINAL
+            ====================================================== */}
 
-                    <h2>
-                        Conhecimento gera transformação.
-                    </h2>
+            <section className="ods13-cta">
 
-                    <p className="mt-3">
-                        Comece conhecendo atitudes que podem ser aplicadas
-                        no seu cotidiano.
-                    </p>
+                <div className="ods13-cta-circulo"></div>
 
-                    <Link
-                        to="/dicas"
-                        className="btn btn-light text-primary rounded-pill px-4 mt-2"
-                    >
-                        Ver dicas
-                        <i className="bi bi-arrow-right ms-2"></i>
-                    </Link>
+                <div className="container">
+
+                    <div className="ods13-cta-conteudo">
+
+                        <div className="ods13-cta-icone">
+                            <i className="bi bi-globe-americas"></i>
+                        </div>
+
+                        <span>
+                            CLIMACONSCIENTE • ODS 13
+                        </span>
+
+                        <h2>
+                            Conhecimento gera
+                            <span> transformação.</span>
+                        </h2>
+
+                        <p>
+                            Comece conhecendo atitudes que podem ser aplicadas
+                            no seu cotidiano.
+                        </p>
+
+                        <Link
+                            to="/dicas"
+                            className="btn ods13-cta-btn"
+                        >
+                            Começar agora
+                            <i
+                                className="bi bi-arrow-right ms-2"
+                                aria-hidden="true"
+                            ></i>
+                        </Link>
+
+                    </div>
 
                 </div>
 

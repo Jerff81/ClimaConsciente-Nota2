@@ -1,28 +1,143 @@
 import { Link } from "react-router-dom";
 
+const OBJETIVOS = [
+    {
+        numero: "01",
+        icone: "bi-book",
+        titulo: "Informar",
+        texto:
+            "Apresentar conteúdos acessíveis sobre mudanças climáticas e sustentabilidade.",
+    },
+    {
+        numero: "02",
+        icone: "bi-lightbulb",
+        titulo: "Conscientizar",
+        texto:
+            "Incentivar a reflexão sobre os impactos das escolhas realizadas no cotidiano.",
+    },
+    {
+        numero: "03",
+        icone: "bi-check-circle",
+        titulo: "Incentivar ações",
+        texto:
+            "Estimular práticas que contribuam para um futuro mais sustentável.",
+    },
+];
+
 function Sobre() {
     return (
         <>
-            <section className="pagina-hero">
+            {/* =====================================================
+                HERO
+            ====================================================== */}
+
+            <section className="sobre-hero">
+
+                <div className="sobre-hero-circulo sobre-circulo-1"></div>
+                <div className="sobre-hero-circulo sobre-circulo-2"></div>
 
                 <div className="container">
 
-                    <div className="pagina-hero-conteudo">
+                    <div className="row align-items-center">
 
-                        <span className="etiqueta">
-                            <i className="bi bi-info-circle me-2"></i>
-                            Sobre o projeto
-                        </span>
+                        <div className="col-lg-7">
 
-                        <h1>
-                            Conheça o ClimaConsciente
-                        </h1>
+                            <div className="sobre-hero-conteudo">
 
-                        <p>
-                            Uma aplicação web criada para promover
-                            informação e conscientização sobre as
-                            mudanças climáticas.
-                        </p>
+                                <span className="sobre-badge">
+                                    <i
+                                        className="bi bi-info-circle me-2"
+                                        aria-hidden="true"
+                                    ></i>
+                                    Sobre o projeto
+                                </span>
+
+                                <span className="sobre-mini-titulo">
+                                    CLIMACONSCIENTE
+                                </span>
+
+                                <h1>
+                                    Informação que
+                                    <span> inspira ação.</span>
+                                </h1>
+
+                                <p>
+                                    Uma aplicação web criada para promover
+                                    informação e conscientização sobre as
+                                    mudanças climáticas e incentivar escolhas
+                                    mais sustentáveis.
+                                </p>
+
+                                <div className="sobre-hero-botoes">
+
+                                    <Link
+                                        to="/ods13"
+                                        className="btn sobre-btn-principal"
+                                    >
+                                        Conhecer o ODS 13
+                                        <i
+                                            className="bi bi-arrow-right ms-2"
+                                            aria-hidden="true"
+                                        ></i>
+                                    </Link>
+
+                                    <Link
+                                        to="/dicas"
+                                        className="btn sobre-btn-secundario"
+                                    >
+                                        Ver dicas
+                                        <i
+                                            className="bi bi-check2-circle ms-2"
+                                            aria-hidden="true"
+                                        ></i>
+                                    </Link>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <div className="col-lg-5 d-none d-lg-block">
+
+                            <div className="sobre-hero-visual">
+
+                                <div className="sobre-orbita sobre-orbita-1"></div>
+                                <div className="sobre-orbita sobre-orbita-2"></div>
+
+                                <div className="sobre-planeta">
+
+                                    <i
+                                        className="bi bi-globe-americas"
+                                        aria-hidden="true"
+                                    ></i>
+
+                                    <strong>
+                                        13
+                                    </strong>
+
+                                    <span>
+                                        AÇÃO PELO CLIMA
+                                    </span>
+
+                                </div>
+
+                                <div className="sobre-visual-item sobre-item-1">
+                                    <i className="bi bi-leaf-fill"></i>
+                                </div>
+
+                                <div className="sobre-visual-item sobre-item-2">
+                                    <i className="bi bi-lightbulb-fill"></i>
+                                </div>
+
+                                <div className="sobre-visual-item sobre-item-3">
+                                    <i className="bi bi-recycle"></i>
+                                </div>
+
+                            </div>
+
+                        </div>
 
                     </div>
 
@@ -31,7 +146,11 @@ function Sobre() {
             </section>
 
 
-            <section className="secao">
+            {/* =====================================================
+                NOSSA PROPOSTA
+            ====================================================== */}
+
+            <section className="sobre-proposta">
 
                 <div className="container">
 
@@ -39,12 +158,13 @@ function Sobre() {
 
                         <div className="col-lg-6">
 
-                            <span className="etiqueta">
-                                Nossa proposta
+                            <span className="sobre-etiqueta">
+                                NOSSA PROPOSTA
                             </span>
 
-                            <h2 className="mt-3">
-                                Informação para transformar atitudes
+                            <h2>
+                                Informação para
+                                <span> transformar atitudes.</span>
                             </h2>
 
                             <p>
@@ -71,23 +191,40 @@ function Sobre() {
 
                         <div className="col-lg-6">
 
-                            <div className="ods-card">
+                            <div className="sobre-proposta-card">
 
-                                <div className="text-center">
+                                <div className="sobre-proposta-icone">
+                                    <i className="bi bi-globe-americas"></i>
+                                </div>
 
-                                    <i
-                                        className="bi bi-globe-americas"
-                                        style={{ fontSize: "4rem" }}
-                                    ></i>
+                                <span>
+                                    NOSSO PROPÓSITO
+                                </span>
 
-                                    <h3 className="mt-3">
-                                        ClimaConsciente
-                                    </h3>
+                                <h3>
+                                    Informação,
+                                    conscientização
+                                    <strong> e ação.</strong>
+                                </h3>
 
-                                    <p>
-                                        Informação, conscientização
-                                        e ação pelo clima.
-                                    </p>
+                                <div className="sobre-proposta-linha"></div>
+
+                                <div className="sobre-proposta-dados">
+
+                                    <div>
+                                        <strong>13</strong>
+                                        <small>ODS</small>
+                                    </div>
+
+                                    <div>
+                                        <strong>01</strong>
+                                        <small>PROPÓSITO</small>
+                                    </div>
+
+                                    <div>
+                                        <strong>∞</strong>
+                                        <small>POSSIBILIDADES</small>
+                                    </div>
 
                                 </div>
 
@@ -102,89 +239,88 @@ function Sobre() {
             </section>
 
 
-            <section className="secao secao-clara">
+            {/* =====================================================
+                OBJETIVOS
+            ====================================================== */}
+
+            <section className="sobre-objetivos">
 
                 <div className="container">
 
-                    <div className="titulo-secao mb-5">
+                    <div className="sobre-titulo-secao">
 
-                        <span className="etiqueta">
-                            Objetivos
-                        </span>
+                        <div>
 
-                        <h2>
-                            O que o projeto busca alcançar?
-                        </h2>
+                            <span className="sobre-etiqueta">
+                                NOSSOS OBJETIVOS
+                            </span>
+
+                            <h2>
+                                Conhecer é o primeiro passo
+                                <span> para transformar.</span>
+                            </h2>
+
+                        </div>
+
+                        <p>
+                            O projeto busca aproximar informação e prática,
+                            incentivando escolhas mais conscientes no dia a dia.
+                        </p>
 
                     </div>
 
 
                     <div className="row g-4">
 
-                        <div className="col-md-4">
+                        {OBJETIVOS.map(function (objetivo) {
 
-                            <article className="dica-card h-100">
+                            return (
+                                <div
+                                    className="col-md-4"
+                                    key={objetivo.numero}
+                                >
 
-                                <div className="dica-icone">
-                                    <i className="bi bi-book"></i>
+                                    <article className="sobre-objetivo-card">
+
+                                        <div className="sobre-objetivo-topo">
+
+                                            <div className="sobre-objetivo-icone">
+
+                                                <i
+                                                    className={
+                                                        "bi " + objetivo.icone
+                                                    }
+                                                    aria-hidden="true"
+                                                ></i>
+
+                                            </div>
+
+                                            <span>
+                                                {objetivo.numero}
+                                            </span>
+
+                                        </div>
+
+                                        <h3>
+                                            {objetivo.titulo}
+                                        </h3>
+
+                                        <p>
+                                            {objetivo.texto}
+                                        </p>
+
+                                        <div className="sobre-objetivo-linha"></div>
+
+                                        <span className="sobre-objetivo-rodape">
+                                            ClimaConsciente
+                                            <i className="bi bi-arrow-up-right"></i>
+                                        </span>
+
+                                    </article>
+
                                 </div>
-
-                                <h3>
-                                    Informar
-                                </h3>
-
-                                <p>
-                                    Apresentar conteúdos acessíveis sobre
-                                    mudanças climáticas e sustentabilidade.
-                                </p>
-
-                            </article>
-
-                        </div>
-
-
-                        <div className="col-md-4">
-
-                            <article className="dica-card h-100">
-
-                                <div className="dica-icone">
-                                    <i className="bi bi-lightbulb"></i>
-                                </div>
-
-                                <h3>
-                                    Conscientizar
-                                </h3>
-
-                                <p>
-                                    Incentivar a reflexão sobre os impactos
-                                    das escolhas realizadas no cotidiano.
-                                </p>
-
-                            </article>
-
-                        </div>
-
-
-                        <div className="col-md-4">
-
-                            <article className="dica-card h-100">
-
-                                <div className="dica-icone">
-                                    <i className="bi bi-check-circle"></i>
-                                </div>
-
-                                <h3>
-                                    Incentivar ações
-                                </h3>
-
-                                <p>
-                                    Estimular práticas que contribuam para
-                                    um futuro mais sustentável.
-                                </p>
-
-                            </article>
-
-                        </div>
+                            );
+                        })}
 
                     </div>
 
@@ -193,18 +329,31 @@ function Sobre() {
             </section>
 
 
-            <section className="secao">
+            {/* =====================================================
+                PÚBLICO E ODS
+            ====================================================== */}
+
+            <section className="sobre-contexto">
 
                 <div className="container">
 
                     <div className="row g-4">
 
-                        <div className="col-md-6">
+                        <div className="col-lg-6">
 
-                            <div className="p-4 rounded-4 border h-100">
+                            <article className="sobre-contexto-card">
+
+                                <div className="sobre-contexto-icone">
+                                    <i className="bi bi-people-fill"></i>
+                                </div>
+
+                                <span>
+                                    PARA QUEM É?
+                                </span>
 
                                 <h3>
-                                    Público-alvo
+                                    Um projeto para
+                                    <strong> todos.</strong>
                                 </h3>
 
                                 <p>
@@ -214,27 +363,53 @@ function Sobre() {
                                     sustentabilidade e mudanças climáticas.
                                 </p>
 
-                            </div>
+                                <div className="sobre-contexto-tags">
+
+                                    <span>Estudantes</span>
+                                    <span>Jovens</span>
+                                    <span>Cidadãos</span>
+                                    <span>Comunidades</span>
+
+                                </div>
+
+                            </article>
 
                         </div>
 
 
-                        <div className="col-md-6">
+                        <div className="col-lg-6">
 
-                            <div className="p-4 rounded-4 border h-100">
+                            <article className="sobre-contexto-card sobre-contexto-ods">
 
-                                <h3>
-                                    ODS 13
-                                </h3>
+                                <div className="sobre-contexto-ods-numero">
+                                    13
+                                </div>
 
-                                <p>
-                                    O projeto está relacionado ao Objetivo
-                                    de Desenvolvimento Sustentável 13,
-                                    voltado à ação contra a mudança global
-                                    do clima.
-                                </p>
+                                <div className="sobre-contexto-ods-conteudo">
 
-                            </div>
+                                    <span>
+                                        NOSSO FOCO
+                                    </span>
+
+                                    <h3>
+                                        ODS 13
+                                    </h3>
+
+                                    <p>
+                                        Ação Contra a Mudança Global do Clima.
+                                    </p>
+
+                                    <Link
+                                        to="/ods13"
+                                        className="sobre-link"
+                                    >
+                                        Conheça o objetivo
+                                        <i className="bi bi-arrow-right ms-2"></i>
+                                    </Link>
+
+                                </div>
+
+                            </article>
 
                         </div>
 
@@ -245,26 +420,143 @@ function Sobre() {
             </section>
 
 
-            <section className="cta">
+            {/* =====================================================
+                JORNADA
+            ====================================================== */}
 
-                <div className="container text-center">
+            <section className="sobre-jornada">
 
-                    <h2>
-                        Conheça o ODS 13
-                    </h2>
+                <div className="container">
 
-                    <p className="mt-3">
-                        Entenda melhor o objetivo que orienta
-                        o desenvolvimento do ClimaConsciente.
-                    </p>
+                    <div className="text-center">
 
-                    <Link
-                        to="/ods13"
-                        className="btn btn-light text-primary rounded-pill px-4 mt-2"
-                    >
-                        Conhecer o ODS 13
-                        <i className="bi bi-arrow-right ms-2"></i>
-                    </Link>
+                        <span className="sobre-etiqueta">
+                            NOSSA JORNADA
+                        </span>
+
+                        <h2>
+                            Informação que leva
+                            <span> à ação.</span>
+                        </h2>
+
+                        <p className="sobre-jornada-intro">
+                            O ClimaConsciente conecta diferentes recursos para
+                            tornar o conhecimento sobre sustentabilidade mais
+                            acessível e estimular mudanças positivas.
+                        </p>
+
+                    </div>
+
+
+                    <div className="sobre-jornada-linha">
+
+                        <div className="sobre-jornada-item">
+
+                            <div className="sobre-jornada-numero">
+                                01
+                            </div>
+
+                            <i className="bi bi-book"></i>
+
+                            <h3>
+                                Informar
+                            </h3>
+
+                            <p>
+                                Conteúdos para conhecer melhor as mudanças
+                                climáticas.
+                            </p>
+
+                        </div>
+
+
+                        <div className="sobre-jornada-item">
+
+                            <div className="sobre-jornada-numero">
+                                02
+                            </div>
+
+                            <i className="bi bi-lightbulb"></i>
+
+                            <h3>
+                                Conscientizar
+                            </h3>
+
+                            <p>
+                                Reflexão sobre nossas escolhas e seus impactos.
+                            </p>
+
+                        </div>
+
+
+                        <div className="sobre-jornada-item">
+
+                            <div className="sobre-jornada-numero">
+                                03
+                            </div>
+
+                            <i className="bi bi-arrow-up-right-circle"></i>
+
+                            <h3>
+                                Agir
+                            </h3>
+
+                            <p>
+                                Atitudes práticas para contribuir com o planeta.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            {/* =====================================================
+                CTA
+            ====================================================== */}
+
+            <section className="sobre-cta">
+
+                <div className="sobre-cta-circulo"></div>
+
+                <div className="container">
+
+                    <div className="sobre-cta-conteudo">
+
+                        <div className="sobre-cta-icone">
+                            <i className="bi bi-globe-americas"></i>
+                        </div>
+
+                        <span>
+                            ODS 13 • AÇÃO CONTRA O CLIMA
+                        </span>
+
+                        <h2>
+                            O futuro depende das
+                            <span> escolhas de hoje.</span>
+                        </h2>
+
+                        <p>
+                            Entenda melhor o objetivo que orienta o
+                            desenvolvimento do ClimaConsciente e descubra
+                            como contribuir para a ação climática.
+                        </p>
+
+                        <Link
+                            to="/ods13"
+                            className="btn sobre-cta-btn"
+                        >
+                            Conhecer o ODS 13
+                            <i
+                                className="bi bi-arrow-right ms-2"
+                                aria-hidden="true"
+                            ></i>
+                        </Link>
+
+                    </div>
 
                 </div>
 
